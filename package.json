@@ -25,7 +25,6 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^3.6.1",
     "gsap": "^3.0.4",
     "vue": "^2.6.11"
   },
