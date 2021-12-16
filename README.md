@@ -7,8 +7,6 @@
 
 *Forked from https://github.com/djaxho/pure-vue-chart*
 
-[![Build Status](https://cloud.drone.io/api/badges/lafriks/vue-bar-graph/status.svg)](https://cloud.drone.io/lafriks/vue-bar-graph)
-
 <hr/>
 
 <h3>Example</h3>
@@ -86,13 +84,14 @@ Or you can provide the data as an array of objects, each with a `value` and `lab
 I'm open to any issues or pull requests so long as
 they are simple, easy to read, use the eslint settings in package.json, 
 and follow commitizen-esque style commit formats. Just open an issue on github and start a discussion.
-- vue-bar-graph issues - https://github.com/lafriks/vue-bar-graph/issues
+- vue-bar-graph issues - https://github.com/manpreet30/vue-bar-graph/issues
 
 <h3>Authors or Acknowledgments</h3>
 
 <ul>
   <li>Danny Jackson</li>
   <li>Lauris BH</li>
+  <li>Manpreet Singh</li>
 </ul>
 
 <h3> List of features </h3>

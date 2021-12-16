@@ -1,13 +1,13 @@
 {
-  "name": "vue-bar-graph",
+  "name": "@manpreet30/vue-bar-graph",
   "version": "1.3.0",
   "description": "Simple and lightweight Vue chart svg component without chart library dependencies",
   "author": {
-    "name": "Lauris BH",
-    "email": "lauris@nix.lv"
+    "name": "Manpreet Singh",
+    "email": "manpreettech30@gmail.com"
   },
-  "repository": "https://github.com/lafriks/vue-bar-graph",
-  "bugs": "https://github.com/lafriks/vue-bar-graph/issues",
+  "repository": "https://github.com/manpreet30/vue-bar-graph",
+  "bugs": "https://github.com/manpreet30/vue-bar-graph/issues",
   "keywords": [
     "vue",
     "chart",
@@ -30,12 +30,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
-    "@vue/eslint-config-airbnb": "^5.3.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.26.0",
-    "eslint-plugin-vue": "^7.9.0",
     "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
@@ -44,10 +39,11 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/recommended",
       "@vue/airbnb"
     ],
-    "rules": {},
+    "rules": {
+      "linebreak-style": 0
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
