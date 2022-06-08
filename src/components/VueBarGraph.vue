@@ -123,7 +123,7 @@
 </template>
 
 <script>
-import { TweenLite } from 'gsap';
+import gsap from 'gsap';
 
 export default {
   props: {
@@ -184,7 +184,7 @@ export default {
       }));
     },
     yAxisWidth() {
-      return this.digitsUsedInYAxis * 5.8 + 5
+      return this.digitsUsedInYAxis * 5.8 + 5;
     },
     xAxisHeight() {
       return this.showYAxis
@@ -291,9 +291,10 @@ export default {
         obj.pop();
         this.dynamicPoints = obj;
       };
-      TweenLite.to(initialData,
-        this.animationDuration,
-        { ...desiredData, onUpdate: convertBackToArray });
+      gsap.to(
+        initialData,
+        { ...desiredData, onUpdate: convertBackToArray, duration: this.animationDuration },
+      );
       this.staticPoints = desiredDataArray;
     },
     getTicks() {

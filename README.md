@@ -2,8 +2,10 @@
   <h1>Vue Bar Graph</h1>
 </p>
 <p align="center">
-    A simple and lightweight vue component for making charts that do not rely on large chart libraries and will not bloat your dependencies
+    A simple and lightweight Vue.js 3 component for making charts that do not rely on large chart libraries and will not bloat your dependencies.
 </p>
+
+> For Vue.js 2.x use 1.x version.
 
 *Forked from https://github.com/djaxho/pure-vue-chart*
 
