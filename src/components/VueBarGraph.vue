@@ -61,7 +61,7 @@
             <line
               :x1="bar.midPoint"
               :x2="bar.midPoint"
-              :y1="innerChartHeight+3"
+              :y1="innerChartHeight + 3"
               :y2="innerChartHeight"
               stroke="#555555"
               stroke-width="1"
@@ -81,7 +81,7 @@
       </g>
       <g v-if="showXAxis">
         <line
-          :x1="showYAxis ? yAxisWidth-1 : 2"
+          :x1="showYAxis ? yAxisWidth - 1 : 2"
           :x2="innerChartWidth + yAxisWidth"
           :y1="innerChartHeight"
           :y2="innerChartHeight"
@@ -91,8 +91,8 @@
       </g>
       <g v-if="showYAxis">
         <line
-          :x1="yAxisWidth-1"
-          :x2="yAxisWidth-1"
+          :x1="yAxisWidth - 1"
+          :x2="yAxisWidth - 1"
           :y1="innerChartHeight"
           y2="0"
           stroke="#555555"
@@ -123,8 +123,6 @@
 </template>
 
 <script>
-import gsap from 'gsap';
-
 export default {
   props: {
     title: { type: String, default: '' },
@@ -280,21 +278,13 @@ export default {
     },
     tween(desiredDataArray) {
       const desiredData = {};
-      const initialData = {};
       for (let i = 0; i < desiredDataArray.length; i += 1) {
         const key = i.toString();
         desiredData[key] = desiredDataArray[i];
-        initialData[key] = this.dynamicPoints[i] || 0;
       }
-      const convertBackToArray = () => {
-        const obj = Object.values(initialData);
-        obj.pop();
-        this.dynamicPoints = obj;
-      };
-      gsap.to(
-        initialData,
-        { ...desiredData, onUpdate: convertBackToArray, duration: this.animationDuration },
-      );
+      const obj = Object.values(desiredData);
+      obj.pop();
+      this.dynamicPoints = obj;
       this.staticPoints = desiredDataArray;
     },
     getTicks() {

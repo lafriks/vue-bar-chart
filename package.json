@@ -1,6 +1,6 @@
 {
   "name": "vue-bar-graph",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Simple and lightweight Vue chart svg component without chart library dependencies",
   "author": {
     "name": "Lauris BH",
@@ -25,23 +25,22 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "gsap": "^3.10.4",
-    "vue": "^3.2.37"
+    "vue": "^3.4.33"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^5.0.4",
-    "@vue/cli-plugin-eslint": "^5.0.4",
-    "@vue/cli-service": "^5.0.4",
-    "@vue/eslint-config-airbnb": "^6.0.0",
-    "@babel/core": "^7.18.2",
-    "@babel/eslint-parser": "^7.18.2",
+    "@babel/core": "^7.24.9",
+    "@babel/eslint-parser": "^7.24.8",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/eslint-config-airbnb": "^8.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.17.0",
-    "eslint-plugin-vue": "^9.1.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-vuejs-accessibility": "^1.2.0",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^5.73.0"
+    "eslint": "8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-vue": "^9.27.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.0",
+    "vue-cli-service": "^5.0.10",
+    "webpack": "^5.93.0"
   },
   "eslintConfig": {
     "root": true,
