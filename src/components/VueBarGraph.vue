@@ -277,15 +277,9 @@ export default {
       return number;
     },
     tween(desiredDataArray) {
-      const desiredData = {};
-      for (let i = 0; i < desiredDataArray.length; i += 1) {
-        const key = i.toString();
-        desiredData[key] = desiredDataArray[i];
-      }
-      const obj = Object.values(desiredData);
-      obj.pop();
-      this.dynamicPoints = obj;
-      this.staticPoints = desiredDataArray;
+      // TODO: no animation support at the moment
+      this.dynamicPoints = this.dataPoints;
+      this.staticPoints = this.dataPoints;
     },
     getTicks() {
       for (let i = 6; i > 0; i -= 1) {
