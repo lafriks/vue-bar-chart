@@ -276,7 +276,7 @@ export default {
       }
       return number;
     },
-    tween(desiredDataArray) {
+    tween() {
       // TODO: no animation support at the moment
       this.dynamicPoints = this.dataPoints;
       this.staticPoints = this.dataPoints;
