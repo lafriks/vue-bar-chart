@@ -6,7 +6,10 @@
     "name": "Lauris BH",
     "email": "lauris@nix.lv"
   },
-  "repository": "https://github.com/lafriks/vue-bar-graph",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lafriks/vue-bar-graph.git"
+  },
   "bugs": "https://github.com/lafriks/vue-bar-graph/issues",
   "keywords": [
     "vue",
