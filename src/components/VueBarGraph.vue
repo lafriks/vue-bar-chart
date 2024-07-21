@@ -276,16 +276,34 @@ export default {
       }
       return number;
     },
-    tween(desiredDataArray) {
-      const desiredData = {};
-      for (let i = 0; i < desiredDataArray.length; i += 1) {
-        const key = i.toString();
-        desiredData[key] = desiredDataArray[i];
-      }
-      const obj = Object.values(desiredData);
-      obj.pop();
-      this.dynamicPoints = obj;
-      this.staticPoints = desiredDataArray;
+    easeInFunc(p) {
+      return 1 - Math.cos(p * (Math.PI / 2));
+    },
+    tween(updatedPoints) {
+      this.staticPoints = updatedPoints;
+
+      this.dynamicPoints = Array(updatedPoints.length).fill(0);
+      const aniPoints = this.dynamicPoints, aniDuration = 200, aniInternal = 10;
+      let aniStart = new Date().getTime();
+      let aniTimerId = setInterval(() => {
+        // the animation was interrupted (new data was passed)
+        if (this.dynamicPoints !== aniPoints) {
+          clearInterval(aniTimerId);
+          return;
+        }
+        let p = (new Date().getTime() - aniStart) / aniDuration;
+        p = p < 0 ? 1 : Math.min(p, 1); // clamp to [0, 1], negative values will be treated as 1 (completed animation)
+        // the animation is done
+        if (p >= 1) {
+          clearInterval(aniTimerId);
+          this.dynamicPoints = updatedPoints;
+          return;
+        }
+        // the animation is still running
+        for (let i = 0; i < aniPoints.length; i += 1) {
+          this.dynamicPoints[i] = this.easeInFunc(p) * updatedPoints[i];
+        }
+      }, aniInternal);
     },
     getTicks() {
       for (let i = 6; i > 0; i -= 1) {
