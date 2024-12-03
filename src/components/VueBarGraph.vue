@@ -245,8 +245,11 @@ export default {
     },
   },
   watch: {
-    dataPoints(updatedPoints) {
-      this.tween(updatedPoints);
+    dataPoints: {
+      handler(updatedPoints) {
+        this.tween(updatedPoints);
+      },
+      deep: true
     },
   },
   created() {
